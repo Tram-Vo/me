@@ -1,13 +1,19 @@
 # -*- coding: UTF-8 -*-
 """Modify each function until the tests pass."""
 
-
+import math
+from typing import ItemsView
 def is_odd(a_number):
     """Return True if a_number is odd, and False if a_number is even.
 
     Look into modulo division using the '%' operator as one way of doing this.
     """
-    return None
+    odd = True
+    if math.fmod(a_number, 2) ==0:
+        odd = False
+
+    return odd
+    
 
 
 def fix_it(moves=True, should_move=True):
@@ -25,7 +31,17 @@ def fix_it(moves=True, should_move=True):
     Most people write this function with 4 return statements. 
     As an extra challenge, see if you can get that down to three.
     """
-    return None
+    if moves and should_move:
+        return "No Problem"
+    elif moves and not should_move:
+        return "Duct Tape"
+    elif not moves and not should_move:
+        return "No Problem"
+    elif not moves and should_move:
+        return "WD-40"
+    else: 
+        return "Something's not righ here mate, looks expensive"
+    
 
 
 def loops_1a():
@@ -45,7 +61,12 @@ def loops_1c(number_of_items=5, symbol="#"):
     string with exacly one symbol in it.
     E.g.: ['#', '#', '#', '#', '#']
     """
-    return None
+    Items = []
+
+    for x in range(0, number_of_items):
+        Items.insert(x, symbol)
+
+    return Items
 
 
 def loops_2():
@@ -66,7 +87,11 @@ def loops_2():
             ['*', '*', '*', '*', '*', '*', '*', '*', '*', '*'],
           ]
     """
-    return None
+    star_square = []
+    for j in range(10):
+        star_square.append(loops_1c(number_of_items=10, symbol="*"))
+
+    return star_square
 
 
 def loops_3():
@@ -90,7 +115,14 @@ def loops_3():
     TIP: notice that this needs to to return strings of numbers,
          so call str(number) to cast.
     """
-    return None
+    number_square = []
+    for i in range(10):
+        number_row = []
+        for j in range (10):
+            number_row.append(str(i))
+        number_square.append(number_row)
+
+    return number_square
 
 
 def loops_4():
