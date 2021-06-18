@@ -51,7 +51,11 @@ def loops_1a():
     return a list of 10 items, each one a string with exacly one star in it.
     E.g.: ['*', '*', '*', '*', '*', '*', '*', '*', '*', '*']
     """
-    return None
+    star_list = []
+    for i in range(10):
+        star_list.append('*')
+
+    return star_list
 
 
 def loops_1c(number_of_items=5, symbol="#"):
@@ -118,7 +122,7 @@ def loops_3():
     number_square = []
     for i in range(10):
         number_row = []
-        for j in range (10):
+        for j in range(10):
             number_row.append(str(i))
         number_square.append(number_row)
 
@@ -142,7 +146,15 @@ def loops_4():
       ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
     ]
     """
-    return None
+    number_square = []
+    
+    for i in range(10):
+        number_row = []
+        for j in range(10):
+            number_row.append(str(j))
+        number_square.append(number_row)
+
+    return number_square
 
 
 def loops_5():
@@ -169,7 +181,17 @@ def loops_5():
         "There are {} green bottles".format(8)
     you'll come to see the pros and cons of each over time.
     """
-    return None
+    number_square = []
+    for i in range(10):
+        coordinates_row = []
+        for j in range(5):
+            coordinates_row.append('(i{}, j{})'.format(i, j))
+        number_square.append(coordinates_row)
+    
+
+
+
+    return number_square
 
 
 def loops_6():
@@ -192,7 +214,15 @@ def loops_6():
     You can use a variable.
     TIP: look out for the starting condition.
     """
-    return None
+    the_wedge = []
+
+    for i in range(10):
+        row = []
+        for j in range(i + 1):
+            row.append(str(j))
+        the_wedge.append(row)
+    
+    return the_wedge
 
 
 def loops_7():
@@ -216,7 +246,16 @@ def loops_7():
     This is a hard problem. Use lots of experimentation and draw
     lots of diagrams!
     """
-    return None
+    pyramid = []
+    for i in range(5):
+        number = []
+        for j in range(9):
+            if j < 5 + i and j > 3 - i:
+                number.append('*')
+            else:
+                number.append(' ')
+        pyramid.append(number)
+    return pyramid
 
 
 def little_printer(some_kind_of_list, exercise_name):
