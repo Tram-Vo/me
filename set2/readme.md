@@ -1,1 +1,2 @@
 TODO: Reflect on what you learned this week and what is still unclear.
+Going through the exercises; fixing bugs, making comments, learned how to use four loops, lists, strings, append etc. Very valuable lessons.
