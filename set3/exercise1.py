@@ -50,16 +50,19 @@ def stubborn_asker(low, high):
 
     Look up the docs for input
     """
-    x = input(
-        input("Give me a number")
-    )  # asks for a number and as it is programmed to return it as a
-    # string we use int to make the input value and integer 
-    while (x < low) or (x > high): #checks if the input is outside of the range 
-        x = int(
-            input("Please try again")
-        )  # if it is outside the range asks for a new number
-        # low < val < high 
-    return x  #
+   
+
+    
+
+    x = int(input(f"give a number between {low}, {high}: "))
+    while (x<low) or (x>high):
+        x = int(input(f"give a number between {low}, {high}: "))
+    return x
+
+            
+
+
+
 
 
 
@@ -74,12 +77,11 @@ def not_number_rejector(message):
 
     while True:
         try: 
-            input_number = int(message)
+            input_number = int(input(message))
             print("Thanks! {} looks good".format(input_number))
             return input_number
         except Exception as e: 
-            print("err, you wot, try again ({})".format)
-    return None
+            print("err, you wot, try again ({})".format(e))
 
 
 def super_asker(low, high):
@@ -90,7 +92,14 @@ def super_asker(low, high):
     Try to call at least one of the other functions to minimise the
     amount of code.
     """
-    return None
+
+
+
+    
+    not_number_rejector(f"please give me a number  {low} {high}: ")
+    x = stubborn_asker(low, high)
+    return x
+
 
 
 if __name__ == "__main__":
