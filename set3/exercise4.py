@@ -3,11 +3,12 @@
 
 
 import math
+from typing import Sequence
 
 # import time
 
 
-def binary_search(low, high, actual_number):
+def binary_search(low, high, arr, x):
     """Do a binary search.
 
     This is going to be your first 'algorithm' in the usual sense of the word!
@@ -24,12 +25,31 @@ def binary_search(low, high, actual_number):
     Use the VS Code debugging tools a lot here. It'll make understanding 
     things much easier.
     """
-    tries = 0
-    guess = 0
+    if high >= low:
 
-    # Write your code in here
+        mid = (high + low) // 2
+        if arr[mid] == x:
+            return mid
+        
+        elif arr[mid] > x:
+            return binary_search(arr, low, mid -1, x)
 
-    return {"guess": guess, "tries": tries}
+        else:
+            return binary_search(arr, mid + 1, high, x)
+    
+    else: 
+        return -1 
+
+arr = [1, 5, 100]
+x = 5
+
+result = binary_search(arr, 0, len(arr)-1, x)
+
+if result != -1:
+    print("guess", str(result))
+else:
+    print("tries")
+
 
 
 if __name__ == "__main__":
