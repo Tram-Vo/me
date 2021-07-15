@@ -40,8 +40,10 @@ def get_some_details():
 
     last = data["results"][0]["name"]["last"]
     password = data["results"][0]["login"]["password"]
+    postcode = data["results"][0]["location"]["postcode"]
     id = int(data["results"][0]["id"]["value"])
-    postcode = int(data["results"][0]["location"])
+
+
     return {"lastname": last, "password": password, "postcodePlusID": id + postcode}
 
 
@@ -87,12 +89,22 @@ def wordy_pyramid():
         url = (
             "https://us-central1-waldenpondpress.cloudfunctions.net/"
             "give_me_a_word?"
-            f"wordlength{x}"
+            f"wordlength={x}"
+        )
+        r = requests.get(url)
+        word = r.text
+        list.append(word)
+    for x in range(20, 3, -2):
+        url = (
+            "https://us-central1-waldenpondpress.cloudfunctions.net/"
+            "give_me_a_word?"
+            f"wordlength={x}"
         )
         r = requests.get(url)
         word = r.text
         list.append(word)
     return list
+
 
 
 def pokedex(low=1, high=5):
@@ -127,9 +139,9 @@ def pokedex(low=1, high=5):
 
     return {
         "name": tallest_pokemon["name"],
-         "weight": tallest_pokemon["weight"], 
-         "height": tallest_pokemon["height"]
-        }
+        "weight": tallest_pokemon["weight"], 
+        "height": tallest_pokemon["height"],
+    }
 
 
 def diarist():
