@@ -28,9 +28,9 @@ be_cool("Ben")
 def be_cool_for_ever(name, file_path):
     """Save a message about being cool for ever."""
     mode = "w"  # from the docs
-    history_book = open(file_path, mode)
-    history_book.write(name + " is cool")
-    history_book.close()
+    with open(file_path, mode, encoding="utf-8") as history_book:
+        history_book.write(name + " is cool")
+    
 
 
 # look up what '..' means
@@ -43,8 +43,8 @@ be_cool_for_ever("Ben", "ben_is_cool.lol_UR_joking")
 def who_is_cool(file_path):
     """Read a file and print what it says."""
     mode = "r"  # from the docs
-    history_book = open(file_path, mode)
-    response = history_book.read()
+    with open(file_path, mode, encoding="utf-8") as history_book:
+       response = history_book.read()
     message = "historians have recorded that:\n\t"
     print(message + response)
     history_book.close()

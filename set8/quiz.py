@@ -11,11 +11,14 @@ import time
 
 def string_please() -> str:
     """Returns a string, anything you like."""
-    return "I'm a string!"
+    return print("I'm a string!")
 
 
 def list_please() -> list:
     """Returns a list, anything you like."""
+    list = []
+    for i in range(0,10):
+        
     return [None, None]
 
 
