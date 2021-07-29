@@ -38,13 +38,11 @@ def get_some_details():
 
     data = json.loads(json_data)
 
-    last = data["results"][0]["name"]["last"]
-    password = data["results"][0]["login"]["password"]
-    postcode = data["results"][0]["location"]["postcode"]
-    id = int(data["results"][0]["id"]["value"])
-
-
-    return {"lastname": last, "password": password, "postcodePlusID": id + postcode}
+    last = data['results'][0]['name']['last']
+    password = data['results'][0]['login']['password']
+    postcode = data['results'][0]['location']['postcode']
+    id = int(data['results'][0]['id']['value'])
+    return {"lastname": last, "password": password, "postcodePlusID": postcode + id}
 
 
 
@@ -158,7 +156,16 @@ def diarist():
          the test will have nothing to look at.
     TIP: this might come in handy if you need to hack a 3d print file in the future.
     """
-    pass
+    mode = "r"
+    count = 0 
+    with open("set4/Trispokedovetiles(laser).gcode", mode, encoding= "utf-8") as gc:
+        lines = gc.readlines()
+
+    for line in lines:
+        if lines[:2] == "M10 P1":
+            count +=1
+        print(line)
+    print(count)
 
 
 if __name__ == "__main__":

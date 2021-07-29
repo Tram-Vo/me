@@ -1,1 +1,2 @@
 TODO: Reflect on what you learned this week and what is still unclear.
+This week I've learned how to put data out of json files by importing it first. I learned how to work with the url and pulling json files to get the correct answers. Some problems i encountered is that i wasn't successful in completing the exercise because I don't know to how commit the url and push it to my repo. 
