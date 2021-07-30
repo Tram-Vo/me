@@ -1,1 +1,2 @@
 TODO: Reflect on what you learned this week and what is still unclear.
+This week, we had our quizzes and I've learned that I shouldn't overthink on how to write my code, some questions are more straightforward than I think, some may even just take 1 line of commands to get the right answer. 
