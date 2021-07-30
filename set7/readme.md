@@ -1,1 +1,2 @@
 TODO: Reflect on what you learned this week and what is still unclear.
+This week is 1 week before our quiz, I went back on previous exercises and tries to make sense of python on a deeper level and does some practice for my quiz. In class we were just fixing our data project. 
