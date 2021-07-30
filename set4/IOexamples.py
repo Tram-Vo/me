@@ -28,9 +28,9 @@ be_cool("Ben")
 def be_cool_for_ever(name, file_path):
     """Save a message about being cool for ever."""
     mode = "w"  # from the docs
-    with open(file_path, mode, encoding="utf-8") as history_book:
-        history_book.write(name + " is cool")
-    
+    history_book = open(file_path, mode)
+    history_book.write(name + "is cool")
+    history_book.close()
 
 
 # look up what '..' means

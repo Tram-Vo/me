@@ -1,1 +1,2 @@
 TODO: Reflect on what you learned this week and what is still unclear.
+This is a flex week, so I took my time to work on my panda files and change it enough so it fits my data project. I'm actually still unclear about how I should present my data but I'm working towards it. 
