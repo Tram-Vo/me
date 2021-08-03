@@ -1,1 +1,2 @@
 TODO: Reflect on what you learned this week and what is still unclear.
+This week I we were introduced to jupyther notebook to present our datasets. Our guest lectures also talked about how computational design could analyse people's behaviour through linear regression. Our information are then analysed and presented graphically for a better understanding. 
