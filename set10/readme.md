@@ -1,1 +1,2 @@
 TODO: Reflect on what you learned this week and what is still unclear.
+This week I was finishing up my data projects, I tried to install geopandas into my dataset and graph my location and information geographically, but it didn't work so I had to improvise and use a scatterplot to graphically demonstrate location density of Airbnb listings. 
